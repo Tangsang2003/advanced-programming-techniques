@@ -1,0 +1,6 @@
+.metadata/
+.project
+.gdbinit
+.settings/
+.cproject
+Debug/
