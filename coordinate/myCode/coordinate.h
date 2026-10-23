@@ -33,7 +33,7 @@ private:
 	 * @param phi   Reference to store the azimuthal angle (in radians).
 	 * @param theta Reference to store the polar angle (in radians).
 	 */
-	void getPolar(float &r, float &phi, float &theta);
+	void getPolar(float &r, float &phi, float &theta) const;
 
 	/**
 	 * @brief Converts stored Cartesian coordinates into Cylindrical coordinates.
@@ -42,7 +42,7 @@ private:
 	 * @param phi Reference to store the azimuthal angle (in radians).
 	 * @param h   Reference to store the height along the z-axis.
 	 */
-	void getCylinder(float &r, float &phi, float &h);
+	void getCylinder(float &r, float &phi, float &h) const;
 
 
 public:
@@ -71,21 +71,21 @@ public:
 	 * @param &y Reference to the variable where y-coordinate is to be returned.
 	 * @param &z Reference to the variable where z-coordinate is to be returned.
 	 */
-	void getCartesian(float &x, float &y, float &z);
+	void getCartesian(float &x, float &y, float &z) const;
 
 	/**
 	 * @brief Adds another coordinate object to the current coordinate.
 	 *
 	 * @param c Reference to another Coordinate object.
 	 */
-	void add(Coordinate &c);
+	void add(const Coordinate &c);
 
 	/**
 	 * @brief Prints the current coordinate object in the format specified.
 	 *
 	 * @param style Represents one of the style defined in the coordinateType enum.s
 	 */
-	void print(coordinateType style);
+	void print(coordinateType style) const;
 	~Coordinate();
 
 };
